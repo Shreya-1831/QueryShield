@@ -1,0 +1,2 @@
+import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+export default function UsageChart({data=[]}){if(!data.length)return <p className="muted">Usage metrics are not available.</p>;return <div style={{width:'100%',height:260}}><ResponsiveContainer><AreaChart data={data}><CartesianGrid strokeDasharray="3 3" opacity={0.2}/><XAxis dataKey="date"/><YAxis/><Tooltip/><Area dataKey="count" stroke="var(--accent)" fill="var(--accent-soft)"/></AreaChart></ResponsiveContainer></div>;}

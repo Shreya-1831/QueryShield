@@ -1,0 +1,4 @@
+import Container from '../../components/common/Container.jsx';
+import SectionHeading from '../../components/common/SectionHeading.jsx';
+import WorkflowSection from '../../components/public/WorkflowSection.jsx';
+export default function HowItWorks(){return <><section className="page-section"><Container><SectionHeading eyebrow="HOW IT WORKS" title="From natural language to authorized results" description="A multi-stage workflow keeps identity, policy, SQL safety, and privacy checks independent."/></Container></section><WorkflowSection/><section className="section"><Container><div className="notice-card"><strong>One key principle</strong><p>The local language model is a query-generation component—not an authorization authority. Every request must pass deterministic backend validation.</p></div></Container></section></>;}

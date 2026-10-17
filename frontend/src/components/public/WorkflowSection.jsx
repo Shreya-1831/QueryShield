@@ -1,0 +1,4 @@
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import SectionHeading from '../common/SectionHeading.jsx';
+import { WORKFLOW } from '../../utils/constants.js';
+export default function WorkflowSection(){return <section className="section section-muted"><div className="container"><SectionHeading eyebrow="HOW IT WORKS" title="A secure path from question to answer" description="The model proposes a query. Deterministic backend controls decide what can actually run."/><div className="workflow-list">{WORKFLOW.map((step,i)=><div className="workflow-step" key={step}><span className="workflow-number">{String(i+1).padStart(2,'0')}</span><CheckCircle2 size={19}/><span>{step}</span>{i<WORKFLOW.length-1&&<ArrowRight className="workflow-arrow" size={16}/>}</div>)}</div><p className="workflow-footnote">Security decisions must be enforced server-side and by database privileges—not by the AI model or frontend alone.</p></div></section>;}

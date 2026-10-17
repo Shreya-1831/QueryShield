@@ -1,0 +1,5 @@
+import { Link } from 'react-router-dom';
+import PageHeader from '../../components/common/PageHeader.jsx';
+import HealthOverview from '../../components/admin/HealthOverview.jsx';
+import useHealth from '../../hooks/useHealth.js';
+export default function AdminDashboard(){const h=useHealth();return <><PageHeader eyebrow="ADMIN CONSOLE" title="System overview" description="Operational status of the local QueryShield stack." actions={<button className="button button-secondary" onClick={h.refresh}>Refresh status</button>}/>{h.error&&<div className="inline-alert">{h.error}</div>}<HealthOverview api={h.api} database={h.database}/><div className="quick-actions">{[['/admin/users','Manage users','Review user mappings and roles.'],['/admin/audit-logs','Review audit logs','Inspect security-relevant activity.'],['/admin/health','System health','Review service availability.'],['/admin/models','Local models','Inspect model status.']].map(([to,title,desc])=><Link className="quick-action" to={to} key={to}><div><strong>{title}</strong><p>{desc}</p></div></Link>)}</div></>;}

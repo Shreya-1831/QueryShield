@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: queryshield-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: change_root_password
+      MYSQL_DATABASE: queryshield
+      MYSQL_USER: queryshield_app
+      MYSQL_PASSWORD: change_app_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - queryshield_mysql:/var/lib/mysql
+volumes:
+  queryshield_mysql:

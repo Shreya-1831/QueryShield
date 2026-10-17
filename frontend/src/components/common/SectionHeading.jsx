@@ -1,0 +1,1 @@
+export default function SectionHeading({eyebrow,title,description,center=true}){return <div className={`section-heading ${center?'text-center':''}`}>{eyebrow&&<p className="eyebrow">{eyebrow}</p>}<h2>{title}</h2>{description&&<p className="section-description">{description}</p>}</div>;}

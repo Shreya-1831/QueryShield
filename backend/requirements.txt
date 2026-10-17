@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+pydantic-settings
+
+sqlalchemy
+pymysql
+
+sqlglot
+
+httpx
+
+transformers
+torch
+sentencepiece
+
+pytest

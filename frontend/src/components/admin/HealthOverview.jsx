@@ -1,0 +1,2 @@
+import StatCard from '../app/StatCard.jsx';
+export default function HealthOverview({api,database}){return <div className="stats-grid"><StatCard label="FastAPI" value={api?.status||api?.state||'Unknown'} detail="Local application service" icon="Server"/><StatCard label="Database" value={database?.status||database?.state||'Unknown'} detail="Database health endpoint" icon="Database"/><StatCard label="Deployment" value="On-premise" detail="No cloud AI dependency at runtime" icon="ShieldCheck"/></div>;}

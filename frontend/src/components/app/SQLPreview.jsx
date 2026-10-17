@@ -1,0 +1,2 @@
+import { Code2, ShieldCheck } from 'lucide-react';
+export default function SQLPreview({sql}){if(!sql)return null;return <section className="panel"><div className="panel-heading"><h3><Code2 size={18}/> SQL preview</h3><span className="safe-label"><ShieldCheck size={14}/> Backend response</span></div><pre className="sql-preview"><code>{sql}</code></pre><p className="muted small">A preview is not proof of authorization. The backend must validate SQL before execution.</p></section>;}

@@ -1,0 +1,2 @@
+import DataTable from './DataTable.jsx';
+export default function ResultTable({data}){if(!Array.isArray(data)||!data.length)return null;const columns=Object.keys(data[0]).map(key=>({key,label:key.replace(/_/g,' ')}));return <section className="panel"><div className="panel-heading"><h3>Query results</h3><span className="muted small">{data.length} rows</span></div><DataTable columns={columns} rows={data}/></section>;}

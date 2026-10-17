@@ -1,0 +1,33 @@
+{
+  "result_columns": [
+    "employee_id",
+    "name",
+    "salary",
+    "date_of_birth",
+    "phone"
+   ],
+  "allowed_columns": {
+    "employee_id": true,
+    "name": true,
+    "salary": true,
+    "date_of_birth": true
+  },
+  "privacy_rules": {
+    "employee_id": {
+      "sensitivity": "normal",
+      "action": "allow"
+    },
+    "name": {
+      "sensitivity": "normal",
+      "action": "allow"
+    },
+    "salary": {
+      "sensitivity": "sensitive",
+      "action": "mask"
+    },
+    "date_of_birth": {
+      "sensitivity": "sensitive",
+      "action": "mask"
+    }
+  }
+}
